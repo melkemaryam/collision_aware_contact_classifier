@@ -135,7 +135,7 @@ The framework can be used by specifying the intentions through the arguments in 
 * `training.py`: train the classifier,
 * `tuning.py`: optimise the classifier with one of the three optimisation methods.
 
-## 3. The State-of-the-art Classifier
+## The State-of-the-art Classifier
 
 As further described in the thesis, a state-of-the-art classifier is created at the beginning to later compare it with the performance of the novel classifier. 
 
