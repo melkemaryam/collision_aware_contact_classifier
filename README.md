@@ -169,7 +169,7 @@ This is the path that needs to be passed through the main command, so that the c
 
 ## Generating Data
 
-Using the torque data from the `h5files` directory, a specific .h5 file can be added to the Terminal command, which will automatically create new data to predict labels.
+Using the torque data from humanoid robot, a specific .h5 file can be added to the Terminal command, which will automatically create new data to predict labels.
 
 ## Prediction
 
@@ -206,7 +206,7 @@ where all arguments are optional. The arguments are described below:
 * `-op` or `--optimiser` to add the optimisation methods to use, can be either `bayesian`, `random`, or `hyperband`,
 * `-inop` or `--inner_optimiser` to add the inner optimisation method, can be either `adam`, `sgd`, or `rms`,
 * `-d`or `--dataset` to add the path to the input dataset for training and testing the classifier,
-* `-pr`or `--predictions` to add the path to the output prediction directory or add a `.h5` file from the `h5files` directory for instant data generation,
+* `-pr`or `--predictions` to add the path to the output prediction directory or add a `.h5` file from the robot's log files for instant data generation,
 * `-tr` or `--train` to indicate the number of hyperparameters to optimise during the training process, or to skip the training entirely to just predict labels, can be either `all`, `one`, `none`, or `pred`.
 
 ### 4. Run command in the Terminal
@@ -282,8 +282,7 @@ However, if a specific model is desired to be used on a specific dataset, it can
 python3 main.py -m ../output/hyperband.model -pr Predict -tr pred
 ```
 
-By passing a file that ends with `.h5` instead of an image directory, the framework knows that it needs to generate new data first, which will then be used to predict labels. This can be specified as follows:
-
+By passing a file that ends with `.h5` instead of an image directory, the framework knows that it needs to generate new data first, which will then be used to predict labels. The following command shows an example:
 ```
 python3 main.py -pr ../h5files/collision/log_20200916_130141.h5
 ```
